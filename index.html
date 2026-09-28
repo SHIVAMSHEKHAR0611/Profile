@@ -1,0 +1,2773 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shivam Shekhar | Technology & AI/ML Consultant</title>
+
+  <meta
+    name="description"
+    content="Shivam Shekhar — ICT Business Analyst, AI/ML, Data and VET Technology Consultant in Sydney, Australia."
+  >
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: #070914;
+      color: #f7f8ff;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --background: #070914;
+      --background-2: #0c1020;
+
+      --white: #ffffff;
+      --text: #f5f7ff;
+      --muted: #aeb6ca;
+
+      --purple: #8b5cf6;
+      --blue: #4f8cff;
+      --cyan: #22d3ee;
+      --pink: #ec4899;
+      --green: #34d399;
+
+      --border: rgba(255, 255, 255, 0.11);
+
+      --glass: rgba(255, 255, 255, 0.055);
+
+      --max-width: 1180px;
+    }
+
+
+    /* =========================================================
+       BACKGROUND
+    ========================================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(139, 92, 246, 0.16),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(34, 211, 238, 0.12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 80% 75%,
+          rgba(236, 72, 153, 0.08),
+          transparent 25%
+        );
+
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    .background-orb {
+      position: fixed;
+
+      border-radius: 50%;
+
+      filter: blur(90px);
+
+      opacity: 0.25;
+
+      pointer-events: none;
+
+      z-index: -1;
+
+      animation: floatOrb 14s ease-in-out infinite alternate;
+    }
+
+    .orb-one {
+      width: 280px;
+      height: 280px;
+
+      background: var(--purple);
+
+      top: 10%;
+      left: -120px;
+    }
+
+    .orb-two {
+      width: 250px;
+      height: 250px;
+
+      background: var(--cyan);
+
+      right: -100px;
+      top: 35%;
+
+      animation-delay: -5s;
+    }
+
+    .orb-three {
+      width: 220px;
+      height: 220px;
+
+      background: var(--pink);
+
+      left: 40%;
+      bottom: -100px;
+
+      animation-delay: -9s;
+    }
+
+    @keyframes floatOrb {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        transform: translate(50px, -40px);
+      }
+    }
+
+
+    /* =========================================================
+       CONTAINER
+    ========================================================= */
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navbar {
+      position: fixed;
+
+      top: 18px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: min(94%, 1100px);
+
+      z-index: 1000;
+
+      border: 1px solid var(--border);
+
+      background: rgba(8, 11, 25, 0.72);
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+
+      padding: 0 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+
+      font-weight: 900;
+
+      letter-spacing: -0.5px;
+    }
+
+    .logo-dot {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 5px;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+
+      padding: 9px 12px;
+
+      color: #aeb6ca;
+
+      font-size: 0.78rem;
+      font-weight: 700;
+
+      border-radius: 9px;
+
+      transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.2),
+          rgba(34, 211, 238, 0.12)
+        );
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section {
+      scroll-margin-top: 110px;
+      padding: 120px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 15px;
+
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      content: "";
+
+      width: 25px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--purple),
+          var(--cyan)
+        );
+
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+
+      line-height: 1.02;
+
+      letter-spacing: -3px;
+    }
+
+    .section-description {
+      max-width: 720px;
+
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      font-size: 1rem;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      padding-top: 160px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr 0.7fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 8px 13px;
+
+      border-radius: 50px;
+
+      border: 1px solid rgba(34, 211, 238, 0.25);
+
+      background: rgba(34, 211, 238, 0.07);
+
+      color: #9ff5ff;
+
+      font-size: 0.72rem;
+      font-weight: 800;
+
+      margin-bottom: 25px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 9vw, 7.5rem);
+
+      line-height: 0.88;
+
+      letter-spacing: -7px;
+
+      margin-bottom: 35px;
+    }
+
+    .gradient-text {
+      background:
+        linear-gradient(
+          100deg,
+          #ffffff 10%,
+          #9f8cff 45%,
+          #43e8ff 80%
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-title {
+      color: #d5daea;
+
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+
+      font-weight: 700;
+
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: var(--cyan);
+    }
+
+    .hero-description {
+      max-width: 730px;
+
+      color: var(--muted);
+
+      font-size: 1.05rem;
+
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 20px;
+
+      border-radius: 11px;
+
+      font-size: 0.83rem;
+      font-weight: 800;
+
+      border: 1px solid var(--border);
+
+      transition: 0.25s ease;
+    }
+
+    .button-primary {
+      color: white;
+
+      border: none;
+
+      background:
+        linear-gradient(
+          100deg,
+          var(--purple),
+          var(--blue)
+        );
+
+      box-shadow:
+        0 10px 30px rgba(100, 80, 255, 0.22);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 15px 40px rgba(100, 80, 255, 0.35);
+    }
+
+    .button-secondary {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255,255,255,0.09);
+
+      transform: translateY(-3px);
+    }
+
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+
+      min-height: 430px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-ring {
+      position: absolute;
+
+      width: 360px;
+      height: 360px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(139,92,246,0.3);
+
+      box-shadow:
+        0 0 100px rgba(139,92,246,0.13),
+        inset 0 0 80px rgba(34,211,238,0.05);
+
+      animation: rotateRing 18s linear infinite;
+    }
+
+    .visual-ring::before,
+    .visual-ring::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+    }
+
+    .visual-ring::before {
+      width: 10px;
+      height: 10px;
+
+      background: var(--cyan);
+
+      box-shadow:
+        0 0 20px var(--cyan);
+
+      top: 35px;
+      right: 50px;
+    }
+
+    .visual-ring::after {
+      width: 8px;
+      height: 8px;
+
+      background: var(--pink);
+
+      box-shadow:
+        0 0 18px var(--pink);
+
+      bottom: 60px;
+      left: 40px;
+    }
+
+    @keyframes rotateRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .profile-card {
+      position: relative;
+
+      z-index: 2;
+
+      width: 280px;
+
+      padding: 30px;
+
+      border-radius: 25px;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(139,92,246,0.18),
+          rgba(255,255,255,0.04)
+        );
+
+      backdrop-filter: blur(20px);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.4);
+
+      text-align: center;
+    }
+
+    .profile-initial {
+      width: 90px;
+      height: 90px;
+
+      margin: 0 auto 20px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--cyan)
+        );
+
+      font-size: 2rem;
+      font-weight: 900;
+
+      box-shadow:
+        0 0 40px rgba(124,92,246,0.35);
+    }
+
+    .profile-card h3 {
+      font-size: 1.15rem;
+
+      margin-bottom: 5px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+
+      font-size: 0.8rem;
+    }
+
+    .profile-tags {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 20px;
+    }
+
+    .profile-tag {
+      padding: 5px 9px;
+
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.06);
+
+      border: 1px solid var(--border);
+
+      font-size: 0.65rem;
+
+      color: #cbd2e2;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 50px;
+
+      align-items: start;
+    }
+
+    .about-text {
+      color: #c5ccdc;
+
+      font-size: 1rem;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .about-highlight {
+      padding: 28px;
+
+      border-radius: 20px;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(139,92,246,0.12),
+          rgba(34,211,238,0.04)
+        );
+    }
+
+    .about-highlight-title {
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 15px;
+    }
+
+    .about-highlight h3 {
+      font-size: 1.45rem;
+
+      line-height: 1.3;
+
+      margin-bottom: 12px;
+    }
+
+    .about-highlight p {
+      color: var(--muted);
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .timeline {
+      max-width: 1000px;
+
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      left: 8px;
+
+      top: 5px;
+      bottom: 5px;
+
+      width: 2px;
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--purple),
+          var(--cyan),
+          var(--pink)
+        );
+    }
+
+    .timeline-item {
+      position: relative;
+
+      padding-left: 48px;
+
+      padding-bottom: 60px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+
+      left: 0;
+      top: 4px;
+
+      width: 17px;
+      height: 17px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--cyan)
+        );
+
+      box-shadow:
+        0 0 0 6px rgba(124,92,246,0.10),
+        0 0 20px rgba(124,92,246,0.4);
+    }
+
+    .timeline-date {
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
+
+      margin-bottom: 7px;
+    }
+
+    .timeline h3 {
+      font-size: 1.45rem;
+
+      margin-bottom: 3px;
+    }
+
+    .timeline-company {
+      color: #c3c9d8;
+
+      margin-bottom: 14px;
+    }
+
+    .timeline ul {
+      padding-left: 18px;
+
+      color: var(--muted);
+
+      font-size: 0.9rem;
+    }
+
+    .timeline li {
+      margin-bottom: 8px;
+    }
+
+
+    /* =========================================================
+       VET CONSULTING
+    ========================================================= */
+
+    .consulting-section {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(139,92,246,0.045),
+          rgba(34,211,238,0.025)
+        );
+
+      border-top: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .consulting-banner {
+      padding: 38px;
+
+      border-radius: 25px;
+
+      margin-bottom: 20px;
+
+      border: 1px solid rgba(139,92,246,0.22);
+
+      background:
+        linear-gradient(
+          120deg,
+          rgba(139,92,246,0.16),
+          rgba(79,140,255,0.08),
+          rgba(34,211,238,0.06)
+        );
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .consulting-banner::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      border-radius: 50%;
+
+      background: rgba(34,211,238,0.12);
+
+      filter: blur(50px);
+
+      right: -80px;
+      top: -80px;
+    }
+
+    .consulting-banner h3 {
+      position: relative;
+
+      z-index: 2;
+
+      font-size: 1.55rem;
+
+      margin-bottom: 10px;
+    }
+
+    .consulting-banner p {
+      position: relative;
+
+      z-index: 2;
+
+      color: var(--muted);
+
+      max-width: 800px;
+
+      font-size: 0.92rem;
+    }
+
+    .consulting-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 17px;
+    }
+
+    .consulting-card {
+      min-height: 220px;
+
+      padding: 27px;
+
+      border-radius: 19px;
+
+      border: 1px solid var(--border);
+
+      background: var(--glass);
+
+      transition: 0.3s ease;
+    }
+
+    .consulting-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(139,92,246,0.35);
+
+      background: rgba(255,255,255,0.07);
+    }
+
+    .consulting-number {
+      color: var(--purple);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      margin-bottom: 18px;
+    }
+
+    .consulting-card h3 {
+      font-size: 1.1rem;
+
+      margin-bottom: 10px;
+    }
+
+    .consulting-card p {
+      color: var(--muted);
+
+      font-size: 0.85rem;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .project-card {
+      position: relative;
+
+      min-height: 270px;
+
+      padding: 28px;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      background: var(--glass);
+
+      transition: 0.35s ease;
+    }
+
+    .project-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+
+      background: var(--purple);
+
+      filter: blur(70px);
+
+      opacity: 0;
+
+      right: -40px;
+      top: -40px;
+
+      transition: 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+
+      border-color: rgba(139,92,246,0.35);
+    }
+
+    .project-card:hover::before {
+      opacity: 0.25;
+    }
+
+    .project-number {
+      position: relative;
+
+      color: var(--cyan);
+
+      font-size: 0.7rem;
+      font-weight: 900;
+
+      margin-bottom: 18px;
+    }
+
+    .project-card h3,
+    .project-card p,
+    .project-tags {
+      position: relative;
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+
+      font-size: 0.86rem;
+    }
+
+    .project-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 6px;
+
+      margin-top: 20px;
+    }
+
+    .project-tag {
+      padding: 4px 8px;
+
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.045);
+
+      border: 1px solid var(--border);
+
+      color: #c6ccda;
+
+      font-size: 0.65rem;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-section {
+      background: rgba(255,255,255,0.018);
+
+      border-top: 1px solid var(--border);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-container {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 14px;
+
+      border-radius: 50px;
+
+      border: 1px solid var(--border);
+
+      background: rgba(255,255,255,0.035);
+
+      color: #cdd4e4;
+
+      font-size: 0.77rem;
+      font-weight: 600;
+
+      transition: 0.25s ease;
+    }
+
+    .skill:hover {
+      color: white;
+
+      transform: translateY(-2px);
+
+      border-color: rgba(34,211,238,0.4);
+
+      background:
+        linear-gradient(
+          100deg,
+          rgba(139,92,246,0.15),
+          rgba(34,211,238,0.1)
+        );
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 17px;
+    }
+
+    .education-card {
+      padding: 27px;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--border);
+
+      background: var(--glass);
+
+      transition: 0.3s ease;
+    }
+
+    .education-card:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(139,92,246,0.3);
+    }
+
+    .education-icon {
+      color: var(--cyan);
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 12px;
+    }
+
+    .education-card h3 {
+      font-size: 1.05rem;
+
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+
+      font-size: 0.83rem;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+      padding-bottom: 80px;
+    }
+
+    .contact-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 70px 40px;
+
+      text-align: center;
+
+      border-radius: 28px;
+
+      border: 1px solid rgba(139,92,246,0.25);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139,92,246,0.15),
+          rgba(79,140,255,0.08),
+          rgba(34,211,238,0.07)
+        );
+    }
+
+    .contact-box::before {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background: var(--purple);
+
+      filter: blur(100px);
+
+      opacity: 0.2;
+
+      left: -100px;
+      top: -100px;
+    }
+
+    .contact-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      border-radius: 50%;
+
+      background: var(--cyan);
+
+      filter: blur(100px);
+
+      opacity: 0.15;
+
+      right: -80px;
+      bottom: -100px;
+    }
+
+    .contact-content {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      max-width: 650px;
+
+      margin: 0 auto 30px;
+
+      color: var(--muted);
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      padding: 30px 0;
+
+      color: #8f98ab;
+
+      font-size: 0.72rem;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* =========================================================
+       SCROLL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a {
+        padding: 8px 7px;
+
+        font-size: 0.7rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .consulting-grid,
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+
+    @media (max-width: 650px) {
+
+      .navbar {
+        top: 8px;
+
+        width: 96%;
+      }
+
+      .nav-inner {
+        min-height: 60px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 85px 0;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+
+        letter-spacing: -4px;
+      }
+
+      .hero-visual {
+        min-height: 320px;
+      }
+
+      .visual-ring {
+        width: 270px;
+        height: 270px;
+      }
+
+      .profile-card {
+        width: 240px;
+      }
+
+      .consulting-grid,
+      .project-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 50px 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- Decorative background -->
+
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+  <div class="background-orb orb-three"></div>
+
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <nav class="navbar">
+
+    <div class="nav-inner">
+
+      <a href="#home" class="logo">
+        Shivam<span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience">
+            Experience
+          </a>
+        </li>
+
+        <li>
+          <a href="#consulting">
+            VET Consulting
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#education">
+            Education
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="reveal">
+
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Based in Sydney, Australia
+          </div>
+
+          <h1>
+            Shivam<br>
+            <span class="gradient-text">
+              Shekhar.
+            </span>
+          </h1>
+
+          <div class="hero-title">
+            ICT Business Analyst
+            <span>·</span>
+            AI/ML
+            <span>·</span>
+            Data
+            <span>·</span>
+            VET Technology Consultant
+          </div>
+
+          <p class="hero-description">
+            I work at the intersection of business, technology,
+            artificial intelligence and vocational education —
+            translating complex technology requirements into
+            practical solutions and industry outcomes.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="#experience"
+              class="button button-primary"
+            >
+              Explore my experience →
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/shivam-shekhar-82726817b/"
+              class="button button-secondary"
+            >
+              Let's connect
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="visual-ring"></div>
+
+          <div class="profile-card">
+
+            <div class="profile-initial">
+              SS
+            </div>
+
+            <h3>
+              Technology Professional
+            </h3>
+
+            <p>
+              Business Analysis · AI · Data · VET
+            </p>
+
+            <div class="profile-tags">
+
+              <span class="profile-tag">
+                Business Analysis
+              </span>
+
+              <span class="profile-tag">
+                AI / ML
+              </span>
+
+              <span class="profile-tag">
+                Data
+              </span>
+
+              <span class="profile-tag">
+                VET SME
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            01 / About
+          </div>
+
+          <h2>
+            Technology with a<br>
+            business perspective.
+          </h2>
+
+          <p class="section-description">
+            A multidisciplinary technology professional combining
+            business analysis, IT operations, AI/ML, data and
+            Australian VET industry experience.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-text reveal">
+
+            <p>
+              I am an ICT Business Analyst with experience across
+              business analysis, IT operations, data analytics,
+              artificial intelligence, machine learning and
+              technology education.
+            </p>
+
+            <p>
+              My professional work focuses on understanding
+              business requirements, improving processes,
+              supporting digital systems and connecting people
+              with technology.
+            </p>
+
+            <p>
+              I also work with the Australian VET sector as an
+              external technology and industry SME. My consulting
+              experience includes AI/ML course development,
+              industry needs analysis, trainer skills assessment,
+              IT training and assessment sessions, industry
+              engagement and professional development for
+              trainers and assessors.
+            </p>
+
+          </div>
+
+
+          <div class="about-highlight reveal">
+
+            <div class="about-highlight-title">
+              Professional focus
+            </div>
+
+            <h3>
+              Connecting industry,
+              technology & education.
+            </h3>
+
+            <p>
+              I bring together practical IT experience,
+              business analysis, AI/ML knowledge and
+              vocational education experience to help
+              organisations make technology useful.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EXPERIENCE
+    ========================================================== -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            02 / Experience
+          </div>
+
+          <h2>
+            Professional journey.
+          </h2>
+
+          <p class="section-description">
+            Experience spanning corporate IT, business analysis,
+            technology education and Australian VET consulting.
+          </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- EXPERIENCE 1 -->
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              Mar 2025 — Present
+            </div>
+
+            <h3>
+              ICT Business Analyst
+            </h3>
+
+            <div class="timeline-company">
+              TrEd College
+            </div>
+
+            <ul>
+
+              <li>
+                Analyse business and technology requirements
+                across education systems and operational processes.
+              </li>
+
+              <li>
+                Support LMS, portal and digital platform
+                improvements involving Canvas, Moodle and
+                Microsoft technologies.
+              </li>
+
+              <li>
+                Develop workflows, process documentation,
+                UAT activities and practical technology solutions.
+              </li>
+
+              <li>
+                Deliver workplace AI and Microsoft Copilot
+                workshops to support technology adoption.
+              </li>
+
+              <li>
+                Develop and improve IT policies covering areas
+                including AI usage, data management, MDM and
+                IT privacy.
+              </li>
+
+              <li>
+                Implement Power Automate workflows and
+                ticketing improvements to streamline operations.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EXPERIENCE 2 -->
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              Sep 2022 — 2025
+            </div>
+
+            <h3>
+              IT Support Officer
+            </h3>
+
+            <div class="timeline-company">
+              TrEd College
+            </div>
+
+            <ul>
+
+              <li>
+                Provided L1/L2 IT support to staff and students
+                across Australian and international campuses.
+              </li>
+
+              <li>
+                Supported Active Directory, Microsoft 365,
+                Exchange, endpoints and education platforms.
+              </li>
+
+              <li>
+                Managed student data, access control and
+                LMS integrations.
+              </li>
+
+              <li>
+                Supported infrastructure, websites and
+                Google Analytics.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EXPERIENCE 3 -->
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              Ongoing · Australia
+            </div>
+
+            <h3>
+              VET Technology SME & External Consultant
+            </h3>
+
+            <div class="timeline-company">
+              Australian VET / RTO Sector
+            </div>
+
+            <ul>
+
+              <li>
+                Worked as an external technology and industry
+                SME supporting Australian Registered Training
+                Organisations.
+              </li>
+
+              <li>
+                Contributed to AI/ML vocational course development,
+                including industry needs, skills gaps and
+                vocational outcomes.
+              </li>
+
+              <li>
+                Supported the development and review of
+                AI/ML qualifications and associated
+                course documentation.
+              </li>
+
+              <li>
+                Delivered external IT training and assessment
+                sessions for trainers and assessors.
+              </li>
+
+              <li>
+                Facilitated industry engagement and professional
+                development sessions covering emerging technology,
+                AI, data science and ICT trends.
+              </li>
+
+              <li>
+                Provided industry perspective on technology
+                projects, teams, quality and contemporary ICT skills.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EXPERIENCE 4 -->
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              Nov 2022 — Present
+            </div>
+
+            <h3>
+              Blockchain & Technology Educator
+            </h3>
+
+            <div class="timeline-company">
+              Vocational Education
+            </div>
+
+            <ul>
+
+              <li>
+                Delivered training across multiple batches of
+                Diploma and Advanced Diploma Applied Blockchain
+                programs.
+              </li>
+
+              <li>
+                Covered blockchain concepts, emerging technology,
+                practical applications and industry use cases.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EXPERIENCE 5 -->
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              Apr 2022 — Jul 2022
+            </div>
+
+            <h3>
+              Project Engineer
+            </h3>
+
+            <div class="timeline-company">
+              Wipro
+            </div>
+
+            <ul>
+
+              <li>
+                Worked within an enterprise technology environment
+                with exposure to software and Java technologies.
+              </li>
+
+              <li>
+                Built foundational experience in enterprise
+                IT delivery and technical problem solving.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         VET CONSULTING
+    ========================================================== -->
+
+    <section
+      id="consulting"
+      class="consulting-section"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            03 / VET Consulting
+          </div>
+
+          <h2>
+            Australian VET<br>
+            technology consulting.
+          </h2>
+
+          <p class="section-description">
+            External SME and consulting experience supporting
+            Australian RTOs, trainers and assessors across ICT,
+            AI/ML, emerging technology and vocational education.
+          </p>
+
+        </div>
+
+
+        <div class="consulting-banner reveal">
+
+          <h3>
+            Industry expertise that connects technology
+            with vocational education.
+          </h3>
+
+          <p>
+            My VET-sector engagements combine practical IT and
+            AI/ML knowledge with an understanding of vocational
+            training, industry skills and contemporary technology
+            expectations.
+          </p>
+
+        </div>
+
+
+        <div class="consulting-grid">
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              01 / SME
+            </div>
+
+            <h3>
+              AI/ML VET Course Consulting
+            </h3>
+
+            <p>
+              Industry needs analysis, skills-gap assessment,
+              vocational outcomes and development/review of
+              AI and machine learning training products.
+            </p>
+
+          </div>
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              02 / TRAINING
+            </div>
+
+            <h3>
+              Trainer & Assessment Sessions
+            </h3>
+
+            <p>
+              External IT training and assessment consulting
+              for trainers and assessors, connecting contemporary
+              industry technology with vocational delivery.
+            </p>
+
+          </div>
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              03 / INDUSTRY
+            </div>
+
+            <h3>
+              Industry Engagement
+            </h3>
+
+            <p>
+              Industry engagement sessions covering emerging
+              technologies, AI, data science, ICT trends,
+              projects, teams and technology quality.
+            </p>
+
+          </div>
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              04 / CPD
+            </div>
+
+            <h3>
+              Trainer Professional Development
+            </h3>
+
+            <p>
+              Technology-focused professional development
+              sessions designed to help trainers understand
+              current ICT and emerging technology practices.
+            </p>
+
+          </div>
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              05 / ASSESSMENT
+            </div>
+
+            <h3>
+              Trainer Skills Assessment
+            </h3>
+
+            <p>
+              Technology-focused skills assessment and
+              industry-informed feedback supporting trainer
+              capability within the VET sector.
+            </p>
+
+          </div>
+
+
+          <div class="consulting-card reveal">
+
+            <div class="consulting-number">
+              06 / ADVISORY
+            </div>
+
+            <h3>
+              RTO Technology Advisory
+            </h3>
+
+            <p>
+              Bridging technology, industry requirements and
+              vocational education to support contemporary
+              ICT and AI/ML training programs.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PROJECTS
+    ========================================================== -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            04 / Projects
+          </div>
+
+          <h2>
+            Selected work.
+          </h2>
+
+          <p class="section-description">
+            Academic, technical and applied technology projects
+            across analytics, AI, blockchain and digital systems.
+          </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              01
+            </div>
+
+            <h3>
+              Telecom Customer Analysis
+            </h3>
+
+            <p>
+              Customer analytics project focused on extracting
+              insights from telecom customer data and presenting
+              findings through visual analytics.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">R</span>
+              <span class="project-tag">Tableau</span>
+              <span class="project-tag">Analytics</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <h3>
+              Speech Emotion Recognition
+            </h3>
+
+            <p>
+              Machine learning project exploring speech features
+              and classification techniques to identify emotions
+              from audio data.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">ML</span>
+              <span class="project-tag">Audio</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              03
+            </div>
+
+            <h3>
+              LLM Chatbot
+            </h3>
+
+            <p>
+              Interactive AI chatbot built with a Streamlit
+              interface exploring practical applications of
+              large language models.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              04
+            </div>
+
+            <h3>
+              Blockchain Supply Chain
+            </h3>
+
+            <p>
+              Blockchain application exploring transparent
+              supply-chain tracking using smart contracts and
+              decentralised technology.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Solidity</span>
+              <span class="project-tag">Ethereum</span>
+              <span class="project-tag">Blockchain</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              05
+            </div>
+
+            <h3>
+              Student Dashboard
+            </h3>
+
+            <p>
+              Data-driven dashboard concept designed to provide
+              students and education stakeholders with useful
+              information through an accessible interface.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Data</span>
+              <span class="project-tag">Dashboard</span>
+              <span class="project-tag">Education</span>
+            </div>
+
+          </div>
+
+
+          <div class="project-card reveal">
+
+            <div class="project-number">
+              06
+            </div>
+
+            <h3>
+              Rollingstock Safety Upgrade
+            </h3>
+
+            <p>
+              Project-focused work associated with the Transport
+              NSW Rollingstock Safety Upgrade, exploring technology,
+              project and operational outcomes.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Transport</span>
+              <span class="project-tag">Business Analysis</span>
+              <span class="project-tag">Project</span>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SKILLS
+    ========================================================== -->
+
+    <section
+      id="skills"
+      class="skills-section"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            05 / Skills
+          </div>
+
+          <h2>
+            Tools & capabilities.
+          </h2>
+
+          <p class="section-description">
+            A combination of technical, analytical, business
+            and vocational education capabilities.
+          </p>
+
+        </div>
+
+
+        <div class="skills-container reveal">
+          <span class="skill">VET Consulting</span>
+          <span class="skill">Industry Engagement</span>
+          <span class="skill">Trainer Assessment</span>
+          <span class="skill">ICT Training</span>
+          
+          <span class="skill">Business Analysis</span>
+          <span class="skill">Requirements Analysis</span>
+          <span class="skill">Process Mapping</span>
+          <span class="skill">UAT</span>
+          <span class="skill">Stakeholder Management</span>
+
+          <span class="skill">Python</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Power BI</span>
+          <span class="skill">Tableau</span>
+          <span class="skill">R</span>
+
+          <span class="skill">Machine Learning</span>
+          <span class="skill">Artificial Intelligence</span>
+          <span class="skill">Data Analytics</span>
+
+          <span class="skill">Microsoft 365</span>
+          <span class="skill">Power Automate</span>
+          <span class="skill">Active Directory</span>
+          <span class="skill">Microsoft Exchange</span>
+
+          <span class="skill">Canvas</span>
+          <span class="skill">Moodle</span>
+          <span class="skill">eSkilled</span>
+          <span class="skill">OpenLearning</span>
+
+          <span class="skill">Solidity</span>
+          <span class="skill">Ethereum</span>
+          <span class="skill">Blockchain</span>
+
+
+
+          
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EDUCATION
+    ========================================================== -->
+
+    <section id="education">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            06 / Education
+          </div>
+
+          <h2>
+            Education & recognition.
+          </h2>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              EDUCATION
+            </div>
+
+            <h3>
+              Master of Information Technology
+            </h3>
+
+            <p>
+              University of New South Wales (UNSW)<br>
+              Data Science / Data Science Engineering
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              EDUCATION
+            </div>
+
+            <h3>
+              Bachelor of Technology
+            </h3>
+
+            <p>
+              Computer Science & Engineering
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              EDUCATION
+            </div>
+
+            <h3>
+              Advanced Diploma
+            </h3>
+
+            <p>
+              Applied Blockchain
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              PROFESSIONAL
+            </div>
+
+            <h3>
+              ACS Skills Assessments
+            </h3>
+
+            <p>
+              Positive skills assessments across ICT Business
+              Analyst, System Analyst and Data Scientist occupations.
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              LEADERSHIP
+            </div>
+
+            <h3>
+              UNSW Leadership
+            </h3>
+
+            <p>
+              UNSW Yoga Society Secretary · DataSoc Mentor ·
+              Club Executive recognition
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-icon">
+              ACHIEVEMENT
+            </div>
+
+            <h3>
+              Academic Achievement
+            </h3>
+
+            <p>
+              Customer Analytics — ranked 3rd overall.<br>
+              Telecom Customer Analysis — 1st in class.<br>
+              Speech Emotion Recognition — Distinction.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+
+    <section
+      id="contact"
+      class="contact-section"
+    >
+
+      <div class="container">
+
+        <div class="contact-box reveal">
+
+          <div class="contact-content">
+
+            <div class="section-label">
+              07 / Contact
+            </div>
+
+            <h2>
+              Let's build something useful.
+            </h2>
+
+            <p>
+              Open to conversations around business analysis,
+              AI/ML, data, technology consulting and Australian
+              VET industry engagements.
+            </p>
+
+            <div class="contact-buttons">
+
+              <!--
+                CHANGE THE EMAIL ADDRESS BELOW
+              -->
+
+              <a
+                href="mailto:shivamshekhartech@outlook.com"
+                class="button button-primary"
+              >
+                Email me →
+              </a>
+
+
+              <!--
+                CHANGE THE LINKEDIN URL BELOW
+              -->
+
+              <a
+                href="https://www.linkedin.com/in/shivam-shekhar-82726817b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-secondary"
+              >
+                LinkedIn ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Shivam Shekhar
+      </span>
+
+      <span>
+        ICT Business Analyst · AI/ML · Data · VET Technology Consultant
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* ---------------------------------------------------------
+       SCROLL REVEAL
+    --------------------------------------------------------- */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(function(element) {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* ---------------------------------------------------------
+       ACTIVE NAVIGATION
+    --------------------------------------------------------- */
+
+    const sections =
+      document.querySelectorAll("section[id]");
+
+    const navLinks =
+      document.querySelectorAll(".nav-links a");
+
+
+    const navObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              navLinks.forEach(function(link) {
+
+                link.classList.remove("active");
+
+              });
+
+
+              const activeLink =
+                document.querySelector(
+                  '.nav-links a[href="#' +
+                  entry.target.id +
+                  '"]'
+                );
+
+
+              if (activeLink) {
+
+                activeLink.classList.add("active");
+
+              }
+
+            }
+
+          });
+
+        },
+        {
+          rootMargin: "-35% 0px -55% 0px"
+        }
+      );
+
+
+    sections.forEach(function(section) {
+
+      navObserver.observe(section);
+
+    });
+
+
+    /* ---------------------------------------------------------
+       SMOOTH NAVIGATION
+    --------------------------------------------------------- */
+
+    navLinks.forEach(function(link) {
+
+      link.addEventListener("click", function(event) {
+
+        const targetId =
+          link.getAttribute("href");
+
+        const target =
+          document.querySelector(targetId);
+
+
+        if (target) {
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
+
